@@ -1,8 +1,7 @@
 def solution(myString):
-    lowl = ['a','b','c','d','e','f','g','h','i','j','k']
     answer = ''
     for i in myString:
-        if i in lowl:
+        if i < 'l':
             answer += 'l'
         else:
             answer += i
