@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+user_input = input().split()
+answer = []
+for i in user_input:
+	answer.append(eval(i))
+	
+print(max(answer))
