@@ -1,0 +1,7 @@
+n,k = map(int,input().split())
+num = list(map(int,input().split()))
+answer = []
+for i in num:
+	answer.append([bin(i).count('1')]+[i])
+
+print(sorted(answer,reverse=True)[k-1][1])
