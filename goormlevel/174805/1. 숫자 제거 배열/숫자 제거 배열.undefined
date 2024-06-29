@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+n,k = input().split()
+nums = input().split()
+answer = 0
+for i in nums:
+	if k not in i:
+		answer += 1
+		
+print(answer)
