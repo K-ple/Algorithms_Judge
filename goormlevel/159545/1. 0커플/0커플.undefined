@@ -1,0 +1,4 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+count = int(input())
+print(sum(list(map(int,input().split()))))
