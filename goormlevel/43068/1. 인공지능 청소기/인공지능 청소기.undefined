@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+test = int(input())
+for _ in range(test):
+	x, y, t = list(map(int,input().split()))
+	s = abs(x) + abs(y)
+	if s == t:
+		print('YES')
+	elif s<t and (t - s) % 2 == 0:
+		print('YES')
+	else:
+		print('NO')
