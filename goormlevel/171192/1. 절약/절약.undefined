@@ -1,0 +1,13 @@
+count = int(input())
+p = 0
+for _ in range(count):
+	key, price = input().split()
+	if key == 'in':
+		p += int(price)
+	else:
+		p -= int(price)
+	
+	if p < 0:
+		print('fail')
+		exit()
+print('success')
