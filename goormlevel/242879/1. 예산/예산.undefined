@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+count, price = map(int, input().split())
+for _ in range(count):
+	p, c = map(int,input().split())
+	price -= p*c
+	if price < 0:
+		print('No')
+		exit()
+print(price)
