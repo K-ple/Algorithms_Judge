@@ -1,0 +1,7 @@
+n,m = map(int, input().split())
+salt = n*0.07
+salt/=(n+m)
+salt *= 100
+a,b = str(salt).split('.')
+b = b[:2]
+print('.'.join([a,b]))
