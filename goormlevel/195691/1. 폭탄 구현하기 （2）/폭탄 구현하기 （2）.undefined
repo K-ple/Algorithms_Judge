@@ -1,0 +1,39 @@
+y, bomb = map(int,input().split())
+score = []
+for i in range(y):
+	score.append([0]*y)
+m = []
+move_x = [0,0,1,-1]
+move_y = [1,-1,0,0]
+answer = []
+
+for i in range(y):
+	m.append(input().split())
+
+for i in range(bomb):
+
+	y, x = map(int,input().split())
+	x -= 1
+	y -= 1
+	if m[y][x] == '@':
+		score[y][x] += 2
+	elif m[y][x] == '#':
+		pass
+	else:
+		score[y][x] += 1
+	for j in range(4):
+		try:
+			if m[y+move_y[j]][x+move_x[j]] == '@':
+				score[y+move_y[j]][x+move_x[j]] += 2
+			elif m[y+move_y[j]][x+move_x[j]] == '#':
+				pass
+			else:
+				score[y+move_y[j]][x+move_x[j]] += 1
+		except:
+			pass
+
+
+for j in score:
+	answer.append(max(j))
+	
+print(max(answer))
