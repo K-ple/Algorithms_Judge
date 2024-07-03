@@ -1,0 +1,8 @@
+count = int(input())
+change = [40,20,10,5,1]
+answer = 0
+for i in change:
+	answer += count // i
+	count %= i
+	
+print(answer)
