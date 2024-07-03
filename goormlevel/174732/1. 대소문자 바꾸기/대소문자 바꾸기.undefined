@@ -1,0 +1,10 @@
+count = int(input())
+word = input()
+answer = ''
+for i in range(count):
+	testing = word[i].upper()
+	if testing == word[i]:
+		answer += word[i].lower()
+	else:
+		answer += word[i].upper()
+print(answer)
