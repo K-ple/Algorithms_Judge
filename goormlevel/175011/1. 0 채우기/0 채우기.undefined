@@ -1,0 +1,21 @@
+x = int(input())
+x1 = 0
+y1 = 0
+m = []
+answer = 0
+for i in range(x):
+	op = list(map(int,input().split()))
+	if 0 in op:
+		x1 = op.index(0)
+		y1 = i
+	m.append(op)
+	
+for i in range(0,x1):
+	answer += m[y1][i]
+for i in range(x1+1,x):
+	answer += m[y1][i]
+for i in range(0,y1):
+	answer += m[i][x1]
+for i in range(y1+1,x):
+	answer += m[i][x1]
+print(answer)
