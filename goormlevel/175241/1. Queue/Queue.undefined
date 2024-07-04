@@ -1,0 +1,21 @@
+n, m = map(int, input().split())
+q = []
+for i in range(n):
+	code = input()
+	try:
+		order, num = code.split()
+	except:
+		order = code
+	if order == 'push':
+		q.append(int(num))
+		if len(q) > m:
+			q.pop()
+			print('Overflow')
+	elif order =='pop':
+		try:
+			p = q.pop(0)
+		except:
+			print("Underflow")
+		else:
+			print(p)
+			
