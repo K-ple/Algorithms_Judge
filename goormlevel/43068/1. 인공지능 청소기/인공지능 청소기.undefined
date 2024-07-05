@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
-# UTF-8 encoding when using korean
-test = int(input())
-for _ in range(test):
-	x, y, t = list(map(int,input().split()))
-	s = abs(x) + abs(y)
-	if s == t:
+count = int(input())
+for _ in range(count):
+	x, y, time = map(int,input().split())
+	if abs(x) + abs(y) == time:
 		print('YES')
-	elif s<t and (t - s) % 2 == 0:
+	elif abs(x) + abs(y) > time:
+		print("NO")
+	elif (time - abs(x) - abs(y)) % 2 == 0:
 		print('YES')
 	else:
 		print('NO')
