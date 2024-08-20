@@ -15,5 +15,6 @@ def solution(keymap, targets):
                 count = -1
                 break
             count += min(idx)
+            
         answer.append(count)
     return answer
